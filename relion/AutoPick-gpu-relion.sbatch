@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=RelionStandard
+#SBATCH --job-name=AutoPick-relion
 #SBATCH --mail-type=end,fail
 #SBATCH --ntasks=XXXmpinodesXXX
 #SBATCH --cpus-per-task=XXXthreadsXXX
@@ -14,6 +14,7 @@
 # 
 module load biology
 module load relion/4.0.1
+module load py-topaz/0.2.5
 
 # Run XXXcommandXXX with srun supplied by RELION
 #

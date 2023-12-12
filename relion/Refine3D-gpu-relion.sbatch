@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=RelionStandard
+#SBATCH --job-name=Refine3D-gpu-relion
 #SBATCH --mail-type=end,fail
 #SBATCH --ntasks=XXXmpinodesXXX
 #SBATCH --cpus-per-task=XXXthreadsXXX

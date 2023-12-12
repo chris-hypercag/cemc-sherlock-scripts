@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=RelionStandard
+#SBATCH --job-name=InitialModel-relion
 #SBATCH --mail-type=end,fail
 #SBATCH --ntasks=XXXmpinodesXXX
 #SBATCH --cpus-per-task=XXXthreadsXXX
