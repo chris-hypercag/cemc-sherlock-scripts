@@ -15,7 +15,7 @@
 module load biology
 module load relion/4.0.1
 
-# Run XXXcommandXXX with srun supplied by RELION
+# Runs command variable supplied by RELION with srun.
 #
 srun --mem-per-cpu=XXXextra2XXX --gres=none XXXcommandXXX
 
