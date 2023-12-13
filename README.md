@@ -8,4 +8,4 @@ If you what more control over the resources you request, or are running from a P
 Please feel free to modify these slurm sbatch scripts to fit your personal requirements. 
 ### Standard-relion.sbatch
 ## MTF Files
-Modular transfer function (MTF) curves for the Gatan K3 and Thermo Fisher Falcon 4 are located in the `mtf` directory. The MTF files are used in during the RELION import job step. The K3 camera attached to the Glacios in Fairchild and the Falcon 4 camera is attached to the Glacios in Chem-H.
+Modular transfer function (MTF) curves for the Gatan K3 and Thermo Fisher Falcon 4 are located in the `mtf` directory. The MTF files are used during the RELION import job step. The K3 camera attached to the Glacios in Fairchild and the Falcon 4 camera is attached to the Glacios in Chem-H.
