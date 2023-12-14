@@ -9,6 +9,8 @@
 #SBATCH --error=XXXerrfileXXX
 #SBATCH --output=XXXoutfileXXX
 
+iecho "Slurm job ID: $SLURM_JOB_ID"
+
 # On Sherlock the RELION program is located in the biology module. 
 # RELION dependencies such as cuda, mpi, ctffind, motioncorr2 etc. are loaded concurrently with relion/4.0.1.
 # 
