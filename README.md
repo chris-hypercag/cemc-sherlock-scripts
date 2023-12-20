@@ -6,10 +6,10 @@ Contained within the `relion` directory are Slurm sbatch scripts for common RELI
 Please feel free to modify these slurm sbatch scripts to fit your personal requirements. If you what to tailor a Slurm sbatch script to your specifications, the `standard-relion.sh` script is a basic script to copy and make changes to. 
 
 ### standard-relion.sh
+The most generic slurm script for running RELION on Sherlock. 
 
-
-### motioncorrell-relion.sh
-The table below contains several combinations of MPI and thread values and the estimated runtime for 1000 micrographs. The estimated runtime was calculated for Micrographs 
+### motcorrel-relion.sh
+The table below contains several combinations of MPI and thread values and the estimated runtime for 1000 micrographs.
 
 | MPI Procs | Threads/Procs | Total CPUS | Memory/CPU | Est. Runtime per 1000 Micrographs |
 |:---------:|:-------------:|:----------:|:----------:|:---------------------------------:|
@@ -17,10 +17,27 @@ The table below contains several combinations of MPI and thread values and the e
 |     12    |       4       |     48     |     3G     |              02:00:00             |
 |     24    |       4       |     96     |     3G     |              00:45:00             |
 
+### ctffind-relion.sh
+The tables below contain the estimated runtime for a `CTF estimation` job with 1000 micrographs for several MPI values. The runtimes were obtained using CTFFIND-4.1 and are split between whether an exhaustive search was perfomed. 
+
+`Use exhaustive search?`: no
+| MPI Procs | Memory/CPU | Est. Runtime per 1000 Micrographs |
+|:---------:|:----------:|:---------------------------------:|
+|     1     |     250M   |              00:14:00             |
+|     6     |     250M   |              00:03:00             |
+
+`Use exhaustive search?`: yes
+| MPI Procs | Memory/CPU | Est. Runtime per 1000 Micrographs |
+|:---------:|:----------:|:---------------------------------:|
+|     1     |     250M   |              01:50:00             |
+|     2     |     250M   |              01:10:00             |
+|     4     |     250M   |              00:35:00             |
+|     6     |     250M   |              00:25:00             |
+
 ### class2D-gpu-relion.sh
 When running the 2D classification job step, under the `Running` tab add --gpus=*value* and --gpus-per-node=*value* to the `Additional sbatch option` fields. In place of *value* put the number of GPUS you plan to run on. Remove any spaces when typing out the sbatch option. On the `Compute` tab, leave the `Which GPUs to use` field blank, Slurm will allocate the requested resources automatically.
 
-If the number of particles in your particles.star file number in the tens of thousands, the fastest runtimes are achived by selecting `Pre-read all particle into RAM?` and `Use GPU acceleration?` in the `Compute` tab. If, however, the number of particles numbers in the hundereds of thousands, pre-reading all particles into RAM may not be possible, in which case select `Copy Particles to scratch directory` and provide the pathway to your scratch directory (e.g. /scratch/users/*your username*). 
+If the number of particles in your particles.star file number in the tens of thousands, the fastest runtimes are achived by selecting `Pre-read all particle into RAM?` and `Use GPU acceleration?` in the `Compute` tab. If, however, the number of particles numbers in the hundereds of thousands, pre-reading all particles into RAM may not be possible, in which case select `Copy Particles to scratch directory` and provide the pathway to your scratch directory (e.g. /scratch/users/*username*). 
 
 
 ## MTF Files
