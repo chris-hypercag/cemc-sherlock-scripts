@@ -6,7 +6,9 @@ Contained within the `relion` directory are Slurm sbatch scripts for common RELI
 Please feel free to modify these slurm sbatch scripts to fit your requirements. If you what to tailor a Slurm sbatch script to your specifications, the `standard-relion.sh` script is a basic script to copy and make changes to. 
 
 ### relion-environment.sh
-A bash script for sourcing additional RELION environment variables. Primarily, it tells RELION to use `sbatch` when submitting new jobs to the queue, and creates five additional fields under the running tab of most jobs. The first two fields are for runtime and mem-per-cpu, which are necessary for submitting jobs on Sherlock. The three remaining fields are for the user to invoke additional Slurm sbatch options. To work, both the name of the option and its value must be included in the field (no spaces), and the variable name tied to the field must be included in the user's sbatch script (i.e. XXXextra3XX, XXXextra4XX, XXXextra5XX). Some useful sbatch options include: --gpus=*value*, --gpus-per-node=*value*, --gres=*value*. The field can also be left blank. 
+A bash script for sourcing additional RELION environment variables. Primarily, it tells RELION to use `sbatch` when submitting new jobs to the queue, and creates five additional fields under the running tab of most jobs. The first two fields are for runtime and mem-per-cpu, which are necessary for submitting jobs on Sherlock. The three remaining fields are for the user to invoke additional Slurm sbatch options.
+
+To work, both the name of the option and its value must be included in the field (no spaces), and the variable name tied to the field must be included in the user's sbatch script (i.e. XXXextra3XX, XXXextra4XX, XXXextra5XX). Some useful sbatch options include: --gpus=*value*, --gpus-per-node=*value*, --gres=*value*. The field can also be left blank. 
 
 To enable these environment variables, the script must be sourced after loading the RELION module, but before opening the RELION GUI. For example, within your RELION project directory: 
 ```
