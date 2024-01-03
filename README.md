@@ -1,6 +1,7 @@
 # cemc-sherlock-scripts
 Sbatch scripts for submitting cryo-EM jobs on Stanford's Sherlock compute cluster.
-## RELION Directory
+
+## RELION directory
 Contained within the `relion` directory are Slurm sbatch scripts for common RELION job runs. These scripts are tailored to their particular RELION job and with the information provided in the tables below insure reasonable runtimes in Sherlock's normal and owners partitions. The values you enter into the RELION GUI under the running tabs will populate the variables within the sbatch script you select.  
 
 Please feel free to modify these slurm sbatch scripts to fit your requirements. If you what to tailor a Slurm sbatch script to your specifications, the `standard-relion.sh` script is a basic script to copy and make changes to. 
@@ -50,6 +51,8 @@ When running the 2D classification job step, under the `Running` tab add --gpus=
 
 If the number of particles in your particles.star file number in the tens of thousands, the fastest runtimes are achived by selecting `Pre-read all particle into RAM?` and `Use GPU acceleration?` in the `Compute` tab. If, however, the number of particles numbers in the hundereds of thousands, pre-reading all particles into RAM may not be possible, in which case select `Copy Particles to scratch directory` and provide the pathway to your scratch directory (e.g. /scratch/users/*username*). 
 
+## MTF directory
+Modular transfer function (MTF) curves for the Gatan K3 and Thermo Fisher Falcon 4 for 200kV and 300kV are located in the `mtf` directory. The MTF files are used during the RELION import job step. The K3 cameras are attached to the Glacios 200kV in Fairchild and Krios G2 300kV (TEM) at SLAC. The Falcon 4i camera is attached to the Glacios 200kV in Chem-H and Krios G2 300kV (TEM) at SLAC.
 
-## MTF Files
-Modular transfer function (MTF) curves for the Gatan K3 and Thermo Fisher Falcon 4 for 200kV and 300kV are located in the `mtf` directory. The MTF files are used during the RELION import job step. The K3 cameras are attached to the Glacios 200kV in Fairchild and Krios G2 300kV (TEM) at SLAC. The Falcon 4i camera is attached to the Glacios 200kV in Chem-H and Krios G2 300kV (TEM) at SLAC. 
+## CRYOSPARC directory
+Not much to see here yet. Just a sbatch script for running the master instance. 
