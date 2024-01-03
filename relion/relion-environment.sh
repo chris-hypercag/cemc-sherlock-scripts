@@ -23,12 +23,12 @@ export RELION_QSUB_EXTRA2_HELP="Enter estimated memory requirements for each cpu
 
 export RELION_QSUB_EXTRA3="Additional sbatch option"
 export RELION_QSUB_EXTRA3_DEFAULT=""
-export RELION_QSUB_EXTRA3_HELP="Use this field to envoke additional Slurm sbatch options. Include both the name of the option and its value in the field. Use the variable XXXextra3XXX in your sbatch script to pass the option from RELION to the script. Examples of useful sbatch options include: --gpus=<value>, --gpus-per-nodes=<value>, --gres=<value>. The field can also be left blank."
+export RELION_QSUB_EXTRA3_HELP="Use this field to invoke additional Slurm sbatch options. Include both the name of the option and its value in the field. Use the variable XXXextra3XXX in your sbatch script to pass the option from RELION to the script. Examples of useful sbatch options include: --gpus=<value>, --gpus-per-node=<value>, --gres=<value>. The field can also be left blank."
 
 export RELION_QSUB_EXTRA4="Additional sbatch option"
 export RELION_QSUB_EXTRA4_DEFAULT=""
-export RELION_QSUB_EXTRA4_HELP="Use this field to envoke additional Slurm sbatch options. Include both the name of the option and its value in the field. Use the variable XXXextra4XXX in your sbatch script to pass the option from RELION to the script. Examples of useful sbatch options include: --gpus=<value>, --gpus-per-nodes=<value>, --gres=<value>. The field can also be left blank."
+export RELION_QSUB_EXTRA4_HELP="Use this field to invoke additional Slurm sbatch options. Include both the name of the option and its value in the field. Use the variable XXXextra4XXX in your sbatch script to pass the option from RELION to the script. Examples of useful sbatch options include: --gpus=<value>, --gpus-per-node=<value>, --gres=<value>. The field can also be left blank."
 
 export RELION_QSUB_EXTRA5="Additional sbatch option"
 export RELION_QSUB_EXTRA5_DEFAULT=""
-export RELION_QSUB_EXTRA5_HELP="Use this field to envoke additional Slurm sbatch options. Include both the name of the option and its value in the field. Use the variable XXXextra5XXX in your sbatch script to pass the option from RELION to the script. Examples of useful sbatch options include: --gpus=<value>, --gpus-per-nodes=<value>, --gres=<value>. The field can also be left blank."
+export RELION_QSUB_EXTRA5_HELP="Use this field to invoke additional Slurm sbatch options. Include both the name of the option and its value in the field. Use the variable XXXextra5XXX in your sbatch script to pass the option from RELION to the script. Examples of useful sbatch options include: --gpus=<value>, --gpus-per-node=<value>, --gres=<value>. The field can also be left blank."
