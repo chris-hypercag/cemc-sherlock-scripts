@@ -56,7 +56,7 @@ Runtimes can vary significantly depending on the number of particles, the number
 ## CRYOSPARC directory
 Not much to see here yet. Just a sbatch script for starting and restarting the master instance. 
 
-Instructions for installing cryoSPARC on Sherlock can be found [here](https://github.com/jnoh2/cryosparc-install/blob/main/README.md)
+Instructions for installing cryoSPARC on Sherlock can be found [here](https://github.com/jnoh2/cryosparc-install/blob/main/README.md).
 
 ## MTF directory
 Modular transfer function (MTF) curves for the Gatan K3 and Thermo Fisher Falcon 4 for 200kV and 300kV are located in the `mtf` directory. The MTF files are used during the RELION import job step. The K3 cameras are attached to the Glacios 200kV in Fairchild and Krios G2 300kV (TEM) at SLAC. The Falcon 4i camera is attached to the Glacios 200kV in Chem-H and Krios G2 300kV (TEM) at SLAC.
