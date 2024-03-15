@@ -53,6 +53,13 @@ If the number of particles in your particles.star file number in the tens of tho
 
 Runtimes can vary significantly depending on the number of particles, the number of iterations, and whether the particles are pre-loaded into RAM or scratch. Anywhere from 30+ minutes for smaller pre-loaded jobs to 12+ hours for large scratch jobs. Just remember, that if your resource allocation expires before the job is complete, you can always continue the run from any previously completed iteration by specifying the *_optimiser.star file in the `I/O` tab.
 
+### initialmodel-relion.sh
+When running the 3D initial model job step, under the `Running` tab add --gpus=*value* and --gpus-per-node=*value* to the `Additional sbatch option` fields. In place of *value* put the number of GPUS you plan to run on. Remove any spaces when typing out the sbatch option. Set `Number of MPI procs` equal to 1 plus the number of GPUs requested. The additional MPI process serves to distribute work between the GPUs. Set `Number of threads` equal to 1, adding additional threads does not speed up the computation. On the `Compute` tab, you may leave the `Which GPUs to use` field blank, Slurm will allocate the requested resources automatically.
+
+If the number of particles in your particles.star file number in the tens of thousands, the fastest runtimes are achived by selecting `Pre-read all particle into RAM?` and `Use GPU acceleration?` in the `Compute` tab. If, however, the number of particles numbers in the hundereds of thousands, pre-reading all particles into RAM may require too much memory, in which case select `Copy Particles to scratch directory` and provide the pathway to your scratch directory (i.e. /lscratch/*username*). 
+
+Runtimes can vary significantly depending on the number of particles, and whether the particles are pre-loaded into RAM or scratch. Anywhere from 30+ minutes for smaller pre-loaded jobs to 12+ hours for large scratch jobs. Just remember, that if your resource allocation expires before the job is complete, you can always continue the run from any previously completed iteration by specifying the *_optimiser.star file in the `I/O` tab.
+
 ## CRYOSPARC directory
 Not much to see here yet. Just a sbatch script for starting and restarting the master instance. 
 
